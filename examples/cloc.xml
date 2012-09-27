@@ -1,0 +1,17 @@
+<?xml version="1.0"?><results>
+<header>
+  <cloc_url>http://cloc.sourceforge.net</cloc_url>
+  <cloc_version>1.56</cloc_version>
+  <elapsed_seconds>0.5</elapsed_seconds>
+  <n_files>2</n_files>
+  <n_lines>10</n_lines>
+  <files_per_second>4</files_per_second>
+  <lines_per_second>20</lines_per_second>
+  <report_file>build/cloc.xml</report_file>
+</header>
+<files>
+  <file name="source/index.php" blank="1" comment="0" code="5"  language="PHP" />
+  <file name="source/index.js" blank="0" comment="0" code="4"  language="Javascript" />
+  <total blank="1" comment="0" code="9" />
+</files>
+</results>
