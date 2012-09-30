@@ -1,0 +1,34 @@
+{
+  "name": "cloc2sloc",
+  "description": "Converts CLOC xml output to SLOCCount compatible output to visualize JavaScript LOC Metrics in Jenkins.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/sspringer82/cloc2sloc",
+  "author": {
+    "name": "Sebastian Springer",
+    "email": "sspringer82@gmx.net"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sspringer82/cloc2sloc.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sspringer82/cloc2sloc/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/sspringer82/cloc2sloc/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "lib/cloc2sloc",
+  "engines": {
+    "node": "0.8.11"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt": "~0.3.15"
+  },
+  "keywords": []
+}
