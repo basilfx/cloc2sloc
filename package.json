@@ -1,7 +1,7 @@
 {
   "name": "cloc2sloc",
   "description": "Convert cloc.xml files into sloc files",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "homepage": "",
   "author": {
     "name": "Sebastian Springer",
