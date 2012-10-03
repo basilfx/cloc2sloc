@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sspringer82/cloc2sloc"
+    "url": "git://github.com/sspringer82/cloc2sloc.git"
   },
   "bugs": {
-    "url": ""
+    "url": "https://github.com/sspringer82/cloc2sloc/issues"
   },
   "bin": "bin/cloc2sloc",
   "licenses": [
     {
       "type": "MIT",
-      "url": "/blob/master/LICENSE-MIT"
+      "url": "https://github.com/sspringer82/cloc2sloc/blob/master/LICENSE-MIT"
     }
   ],
   "main": "lib/cloc2sloc",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "grunt": "~0.3.15"
   },
+
   "dependencies": {
     "xml2js": ">= 0.2.0"
   },

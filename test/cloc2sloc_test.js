@@ -21,21 +21,6 @@ var Cloc2sloc = require('../lib/cloc2sloc.js'),
     test.ifError(value)
 */
 
-/*exports['awesome'] = {
-  setUp: function(done) {
-    // setup here
-    done();
-  },
-  'no args': function(test) {
-    test.expect(1);
-    // tests here
-    test.equal(cloc2sloc.awesome(), 'awesome', 'should be awesome.');
-    test.done();
-  }
-};*/
-
-console.log(Cloc2sloc);
-
 exports['setup'] = {
     setUp: function(done) {
         done();
