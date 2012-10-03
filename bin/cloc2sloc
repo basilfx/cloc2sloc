@@ -1,0 +1,31 @@
+#!/usr/bin/env node
+
+var args = process.argv;
+args.splice(0, 2);
+
+var input, output;
+
+for (var i = 0; i < args.length; i++) {
+    var keyVal = args[i].substr(2).split("=");
+    switch (keyVal[0]) {
+        case 'input':
+            input = keyVal[1];
+            break;
+        case 'output':
+            output = keyVal[1];
+            break;
+        default:
+            break;
+    }
+}
+
+if (input && output) {
+    var Cloc2sloc = require('../lib/cloc2sloc');
+    var cloc2sloc = new Cloc2sloc();
+    cloc2sloc.setInputFile(input);
+    cloc2sloc.setOutputFile(output);
+    cloc2sloc.writeHeader(cloc2sloc.getHeader());
+    cloc2sloc.writeData();
+} else {
+    console.err('invalid input/output specified. Please use --input=/path/to/file and --output=/path/to/file');
+}
