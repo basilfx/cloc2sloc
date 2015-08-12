@@ -22,10 +22,10 @@ module.exports = function(grunt) {
         undef: true,
         boss: true,
         eqnull: true,
-        node: true
-      },
-      globals: {
-        exports: true
+        node: true,
+        globals: {
+          exports: true
+        }
       }
     }
   });
