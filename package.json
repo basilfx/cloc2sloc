@@ -1,12 +1,18 @@
 {
   "name": "cloc2sloc",
   "description": "Convert cloc.xml files into sloc files",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "homepage": "",
   "author": {
     "name": "Sebastian Springer",
     "email": "sspringer82@gmx.net"
   },
+  "contributors": [
+    {
+      "name": "Bas Stottelaar",
+      "email": "basstottelaar@gmail.com"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/sspringer82/cloc2sloc.git"
@@ -14,16 +20,11 @@
   "bugs": {
     "url": "https://github.com/sspringer82/cloc2sloc/issues"
   },
+  "license": "MIT",
   "bin": "bin/cloc2sloc",
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/sspringer82/cloc2sloc/blob/master/LICENSE-MIT"
-    }
-  ],
   "main": "lib/cloc2sloc",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">= 0.12.0"
   },
   "scripts": {
     "test": "grunt test"
@@ -37,5 +38,5 @@
   "dependencies": {
     "xml2js": ">= 0.2.0"
   },
-  "keywords": []
+  "keywords": ["sloccount", "cloc", "sca"]
 }
