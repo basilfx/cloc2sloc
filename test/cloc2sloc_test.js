@@ -22,9 +22,6 @@ var Cloc2sloc = require('../lib/cloc2sloc.js'),
 */
 
 exports['setup'] = {
-    setUp: function(done) {
-        done();
-    },
     'set input File': function(test) {
         var cloc2sloc = new Cloc2sloc();
         cloc2sloc.setInputFile(__dirname + '/../data/input.xml');
@@ -37,9 +34,32 @@ exports['setup'] = {
         test.equal(cloc2sloc.outputFile, __dirname + '/../data/output.sc');
         test.done();
     },
-    'fire excpetion, if input file does not exist': function(test) {
+    'fire exception, if input file is of wrong format': function(test) {
+        var outputFile = __dirname + '/../data/output.sc',
+            cloc2sloc = new Cloc2sloc();
+
+        // Monkey patch the onParserData to manually catch the error without
+        // using promises, callbacks or similar. We only have to make sure the
+        // test.done() is called.
+        var onParserData = cloc2sloc.onParserData;
+        cloc2sloc.onParserData = function(err, result) {
+            try {
+                onParserData(err, result);
+            } catch (e) {
+                test.done();
+            }
+        };
+
+        cloc2sloc.setInputFile(__dirname + '/../data/invalid.xml');
+        cloc2sloc.setOutputFile(outputFile);
+        cloc2sloc.writeHeader(cloc2sloc.getHeader());
+        cloc2sloc.writeData();
+    },
+    'fire exception, if input file does not exist': function(test) {
         var cloc2sloc = new Cloc2sloc();
-        test.throws(function() {cloc2sloc.setInputFile(__dirname + '/../data/nonexistant.xml')});
+        test.throws(function() {
+            cloc2sloc.setInputFile(__dirname + '/../data/nonexistent.xml');
+        });
         test.done();
     },
     'check output header': function(test) {
@@ -61,13 +81,11 @@ exports['setup'] = {
             "language": "Javascript",
             "name": "/tmp/testfile.js"
             },
-            expected = "14\tJS\tsource\t/tmp/testfile.js\n"
+            expected = "14\tJS\tsource\t/tmp/testfile.js\n",
             cloc2sloc = new Cloc2sloc(),
             actual = cloc2sloc.constructLine(input);
 
         test.equal(actual, expected);
         test.done();
-
-
     }
 };

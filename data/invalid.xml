@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<results>
+<header>
+  <cloc_url>http://cloc.sourceforge.net</cloc_url>
+  <cloc_version>1.62</cloc_version>
+  <elapsed_seconds>0.0612161159515381</elapsed_seconds>
+  <n_files>10</n_files>
+  <n_lines>303</n_lines>
+  <files_per_second>163.355675945147</files_per_second>
+  <lines_per_second>4949.67698113795</lines_per_second>
+  <report_file>cloc.xml</report_file>
+</header>
+<languages>
+  <language name="Javascript" files_count="3" blank="23" comment="20" code="145" />
+  <language name="XML" files_count="3" blank="2" comment="0" code="54" />
+  <language name="JSON" files_count="1" blank="1" comment="0" code="38" />
+  <language name="Lisp" files_count="3" blank="7" comment="0" code="13" />
+  <total sum_files="10" blank="33" comment="20" code="250" />
+</languages>
+</results>
