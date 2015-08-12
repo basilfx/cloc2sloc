@@ -23,13 +23,13 @@
   ],
   "main": "lib/cloc2sloc",
   "engines": {
-    "node": ">= 0.8.9"
+    "node": ">= 0.12.7"
   },
   "scripts": {
     "test": "grunt test"
   },
   "devDependencies": {
-    "grunt": "~0.3.15"
+    "grunt": ">=0.4.0"
   },
 
   "dependencies": {
