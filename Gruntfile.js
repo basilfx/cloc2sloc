@@ -10,7 +10,7 @@ module.exports = function(grunt) {
       tasks: 'default'
     },
     jshint: {
-      files: ['Gruntfile', 'bin/cloc2sloc', 'lib/**/*.js', 'test/**/*.js'],
+      files: ['Gruntfile.js', 'bin/cloc2sloc', 'lib/**/*.js', 'test/**/*.js'],
       options: {
         curly: true,
         eqeqeq: true,
